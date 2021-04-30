@@ -1,0 +1,32 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://assignmentClient.example.com/model"
+           targetNamespace="http://assignmentClient.example.com/model"
+           elementFormDefault="qualified">
+
+    <xs:element name="getAccountRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="accountNum" type="xs:int" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAccountResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="account" type="tns:account" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="account">
+        <xs:sequence>
+            <xs:element name="accountNum" type="xs:int" />
+            <xs:element name="product" type="xs:string" />
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="balance" type="xs:double" />
+            <xs:element name="address" type="xs:string" />
+            <xs:element name="hp" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
